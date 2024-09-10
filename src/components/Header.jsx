@@ -8,14 +8,22 @@ const Header = () => {
 
   const changeTheme = () => {
     const navbar = document.getElementsByClassName("navbar")[0]; // İlk navbar elemanını seç
+    const root = document.getElementById("root");
+
     setTheme(!theme);
 
-    if (theme) {
-      navbar.classList.remove("navbar-dark", "bg-dark");
-      navbar.classList.add("navbar-light", "bg-light");
-    } else {
+    if (!theme) {
+      // Dark mode aktif
       navbar.classList.remove("navbar-light", "bg-light");
       navbar.classList.add("navbar-dark", "bg-dark");
+      root.classList.remove("navbar-light", "bg-light");
+      root.classList.add("navbar-dark", "bg-dark");
+    } else {
+      // Light mode aktif
+      navbar.classList.remove("navbar-dark", "bg-dark");
+      navbar.classList.add("navbar-light", "bg-light");
+      root.classList.remove("navbar-dark", "bg-dark");
+      root.classList.add("navbar-light", "bg-light");
     }
   };
 
@@ -40,11 +48,10 @@ const Header = () => {
           </button>
           <div className="icons">
             <i 
-             
               className={`fa-solid fa-basket-shopping ms-3 ${theme ? "text-light" : "text-dark"}`}
             ></i>
             <i 
-             onClick={changeTheme} 
+              onClick={changeTheme} 
               className={`fa-solid fa-lightbulb ms-3 ${theme ? "text-light" : "text-dark"}`}
             ></i>
           </div>
