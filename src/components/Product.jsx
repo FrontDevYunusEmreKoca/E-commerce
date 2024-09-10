@@ -1,8 +1,10 @@
 import React from "react";
 import "../css/product.css";
+import { useNavigate } from "react-router-dom";
 
 const Product = ({ product }) => {
   const { id, price, image, description, title, count } = product;
+  const navigate = useNavigate()
 
   return (
     <div className="col-md-4 col-lg-3  col-6 mt-3">
@@ -20,7 +22,7 @@ const Product = ({ product }) => {
           </div>
         </div>
         <div className="hover-overlay btn-sm">
-          <button className="btn btn-sm">Detaya Git</button>
+          <button onClick={() => navigate("product-details/" + id)} className="btn btn-sm">Detaya Git</button>
         </div>
       </div>
     </div>

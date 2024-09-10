@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import logo from "../images/agd_siyah.png";
 import logo2 from "../images/agd_beyaz.png";
 import "../css/header.css";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [theme, setTheme] = useState(false);
+  const navigate  = useNavigate()
 
   const changeTheme = () => {
     const navbar = document.getElementsByClassName("navbar")[0]; // İlk navbar elemanını seç
@@ -30,7 +32,7 @@ const Header = () => {
   return (
     <nav className={`navbar ${theme ? "navbar-dark bg-dark" : "navbar-light bg-light"}`}>
       <div className="container">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" onClick={()=> navigate("/")} >
           <img src={theme ? logo2 : logo} alt="Logo" className="logo" />
         </a>
         <div className="d-flex">
