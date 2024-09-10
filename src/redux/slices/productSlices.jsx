@@ -9,6 +9,7 @@ const initialState={
 const baseUrl  = "https://fakestoreapi.com"
 
 export const getAllProducts = createAsyncThunk("getAllProduct", async()=>{
+    await new Promise(resolve => setTimeout(resolve, 1000)); // 1 saniyelik gecikme
    const response = await axios
     .get(`${baseUrl}/products`)
     return response.data;

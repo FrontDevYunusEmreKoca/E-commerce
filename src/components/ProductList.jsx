@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllProducts } from '../redux/slices/productSlices';
+import Product from './Product';
+import "../css/product.css";
 
 const ProductList = () => {
   const dispatch = useDispatch();
@@ -13,13 +15,19 @@ const ProductList = () => {
 
   useEffect(() => {
     console.log(products);
+    
   }, [products]);
 
   return (
-    <div>
-      {/* Ürünleri burada listeleyebilirsiniz */}
+    <div className="container">
+      <div className="row  mt-4" >
+        {products.map(product => (
+          <Product key={product.id} product={product} />
+        ))}
+      </div>
     </div>
   );
 };
+
 
 export default ProductList;

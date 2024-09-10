@@ -1,14 +1,19 @@
 
 import './App.css';
 import Header from './components/Header';
-import ProductList from './components/ProductList';
+import Loading from './components/Loading';
+
+import RouterConfig from './config/RouterConfig';
 
 
 function App() {
   return (
     <div className="App">
+     
        <Header />
-       <ProductList />
+       <RouterConfig />
+       <Loading />
+       
     </div>
   );
 }
