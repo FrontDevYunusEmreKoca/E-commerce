@@ -8,7 +8,7 @@ const RouterConfig = () => {
     <div>
       <Routes>
             <Route  path="/" element = {<Home />}></Route>
-            <Route  path="/product-details/:id" element = {<ProductDetails />}></Route>
+            <Route path="/product-details/:id" element={<ProductDetails />} />
       </Routes>
     </div>
   )

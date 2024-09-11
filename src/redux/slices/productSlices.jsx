@@ -1,10 +1,12 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import axios from 'axios'
+import SimilarProduct from '../../components/SimilarProduct'
 
 const initialState={
     products:[],
     selectedProduct : {},
-    loading: false
+    loading: false,
+    SimilarProductPro:{}
 }
 const baseUrl  = "https://fakestoreapi.com"
 
