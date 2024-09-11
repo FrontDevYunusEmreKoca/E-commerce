@@ -7,7 +7,7 @@ const SimilarProduct = ({ product }) => {
   const navigate = useNavigate();
 
   return (
-    <div className="col-md-4 col-lg-3 col-6 mt-3">
+    <div className="col-md-4 col-lg-4 col-6  my-5">
       <div className="card product-card">
         <div className="product-img-container">
           <img src={image} className="product-img" alt={title} />

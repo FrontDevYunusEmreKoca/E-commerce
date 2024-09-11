@@ -36,3 +36,154 @@
     transform: rotate(360deg);
   }
 }
+
+.drawer-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 20px;
+}
+
+.drawer-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #ddd; /* Sınırlama rengi */
+  padding-bottom: 10px;
+}
+
+.drawer-logo {
+  height: 50px;
+}
+
+.drawer-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333; /* Başlık rengi */
+}
+
+.drawer-items {
+  flex: 1;
+  overflow-y: auto;
+  margin-top: 1rem;
+ 
+}
+
+.drawer-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.drawer-item img {
+  border-radius: 5px;
+}
+
+.drawer-item-details {
+  flex: 1;
+  margin-left: 10px;
+}
+.item-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Öğeler arasındaki boşluğu eşit dağıtır */
+  gap: 10px; /* Öğeler arasına boşluk ekler */
+  flex-wrap: nowrap; /* Öğelerin tek satırda kalmasını sağlar */
+}
+
+.price {
+  
+  font-size: 1rem;
+  margin: 0; /* Marjını sıfırlar */
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000; /* Metin rengi */
+  overflow: hidden; /* Taşma durumunda içeriği gizler */
+  text-overflow: ellipsis; /* Taşan metni üç nokta ile gösterir */
+  white-space: nowrap; /* Metni tek satırda tutar */
+  max-width: 250px; /* Varsayılan maksimum genişlik */
+}
+
+/* Mobil ve küçük ekranlar için */
+@media (max-width: 576px) {
+  .title {
+    max-width: 150px; /* Daha küçük maksimum genişlik */
+  }
+}
+
+/* Tablet ve orta boyutlu ekranlar için */
+@media (min-width: 577px) and (max-width: 768px) {
+  .title {
+    max-width: 200px; /* Orta genişlik */
+  }
+}
+
+/* Büyük ekranlar için */
+@media (min-width: 769px) {
+  .title {
+    max-width: 250px; /* Varsayılan genişlik */
+  }
+}
+.quantity {
+  font-size: 0.875rem;
+  color: #007bff; /* Mavi renk */
+  font-weight: bold;
+  margin: 0; /* Marjını sıfırlar */
+}
+.quantity-label {
+  color: #333; /* Etiket rengi */
+  font-weight: normal;
+  margin-right: 5px;
+}
+.quantity-label {
+  color: #333; /* Etiket rengi */
+  font-weight: normal;
+  margin-right: 5px;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 10px; /* Buton ile diğer öğeler arasına boşluk ekler */
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+
+
+.drawer-footer {
+  border-top: 2px solid #ddd; /* Üst sınır rengi */
+  padding-top: 10px;
+  background-color: #f8f9fa; /* Arka plan rengi */
+  text-align: center;
+}
+
+.footer-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #000; /* Yazı rengi */
+  margin: 0;
+}
+
+.footer-amount {
+  font-size: 1.5rem;
+  color: #d9534f; /* Toplam tutar rengi */
+  margin: 0;
+}

@@ -1,4 +1,4 @@
-/* productDetail.css */
+/* Ürün Görseli ve Detayları */
 .image-container {
   display: flex;
   justify-content: center;
@@ -17,6 +17,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100%;
 }
 
 .product-title {
@@ -25,15 +26,13 @@
 }
 
 .product-price {
-  color: #28a745; /* Green */
+  color: #28a745;
 }
 
 .product-description {
   font-size: 1rem;
   color: #666;
-  max-height: 100px;
   overflow: hidden;
-  transition: max-height 0.3s ease;
 }
 
 .iconsDetails {
@@ -49,4 +48,53 @@
 .btn-primary:hover {
   background-color: #0056b3;
   border-color: #004085;
+}
+
+/* Slider için stil */
+.similar-products-slider {
+  overflow: hidden;
+  position: relative;
+  margin-top: 20px;
+}
+
+.similar-products-slider > .d-flex {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 18px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-button-left {
+  left: 10px; /* Sol ok konumunu belirler */
+}
+
+.slider-button-right {
+  right: 10px; /* Sağ ok konumunu belirler */
+}
+
+.slider-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Benzer Ürünler Başlığı */
+.similar-products-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: left;
 }
